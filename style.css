@@ -2,6 +2,56 @@
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
+<<<<<<< Updated upstream
+=======
+}
+  
+#options button {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+#explanation {
+  display: none;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+  
+
+
+
+/* hero banner */
+
+.hero_banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 50px;
+}
+
+.fleche_bottom {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: fleche_bottom 1s infinite alternate;
+}
+@keyframes fleche_bottom {
+  0% {
+    transform: translateY(0);
+>>>>>>> Stashed changes
   }
   
   #options button {
