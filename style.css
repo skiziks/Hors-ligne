@@ -1,6 +1,18 @@
+@font-face {
+	font-family: 'titre';
+	font-weight: 700;
+	src:  url(./fonts/Modak-Regular.ttf) format(truetype)
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'titre';
+}
+p, a, li, span {
+  font-family: Helvetica, Arial;
+}
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* CSS du quizz */
@@ -117,13 +129,14 @@
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .description_hero_banner {
   margin-bottom: 20px;
   text-align: center;
-  margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 
 
@@ -131,6 +144,7 @@
 
 nav {
   margin-top: 20px;
+  padding: 0 20px;
   position: sticky;
   top: 0;
   height: fit-content;
@@ -149,4 +163,12 @@ nav {
   padding: 0;
   align-items: center;
 }
-  
+.liens_navbar {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.logo_mesr {
+  aspect-ratio: 3/2;
+}
