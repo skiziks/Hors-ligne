@@ -142,3 +142,18 @@ header {
   flex-direction: column;
   justify-content: space-around;
 }
+
+
+/* CSS de l'infographie */
+
+#section_infographie {
+  margin-top: 50px;
+}
+
+.infographie {
+  aspect-ratio: 16/9;
+  height: 85vh;
+  margin: auto;
+  display: flex;
+  justify-self: center;
+}
