@@ -14,6 +14,9 @@ p, a, li, span {
   padding: 0;
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
 
 /* CSS du quizz */
 
@@ -40,38 +43,6 @@ p, a, li, span {
 
 .incorrect {
   background-color: red;
-}
-  
-
-
-
-/* hero banner */
-
-.hero_banner {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 50px;
-}
-
-.fleche_bottom {
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  animation: fleche_bottom 1s infinite alternate;
-}
-@keyframes fleche_bottom {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
 }
 
 
@@ -122,19 +93,26 @@ p, a, li, span {
 
 /* CSS de la barre de navigation */
 
+/* CSS de la barre de navigation */
+header {
+  width: 100%;
+  height: fit-content;
+}
+
 #nav_bar {
-  margin-top: 20px;
-  padding: 0 20px;
   position: sticky;
   top: 0;
+  z-index: 1000;
   height: fit-content;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: antiquewhite;
 }
 
-#nav_bar .ul_navbar {
+.ul_navbar {
+  top: 0;
   display: flex;
   justify-content: space-around;
   gap: 40px;
@@ -144,16 +122,23 @@ p, a, li, span {
   align-items: center;
 }
 
-#nav_bar .liens_navbar {
+
+.liens_navbar {
   color: black;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
 
-#nav_bar .logo_mesr {
+.logo_mesr {
+  position: sticky;
+  top: 0;
   aspect-ratio: 3/2;
 }
-.test {
-  height: 2000px;
+
+.hero_banner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
