@@ -209,7 +209,7 @@ header {
 /* CSS de la section témoignage */
 
 #section_temoignage {
-  width: 80%;
+  width: 90%;
   margin: 50px auto;
 }
 
@@ -255,4 +255,65 @@ header {
 
 .cards_temoignage::-webkit-scrollbar {
   width: 0; /* Masquez la scrollbar */
+}
+
+
+/* css du quizz */
+
+#section_quizz {
+  width: 80%;
+  margin: 50px auto;
+  justify-content: center;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: xx-large;
+}
+#quiz-container {
+  border: solid;
+  background-color: antiquewhite;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#question {
+  font-size: x-large;
+}
+
+/* section en savoir plus */
+
+#en_savoir_plus {
+  width: 80%;
+  margin: 50px auto;
+}
+.cards_esp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.card_esp {
+  width: fit-content;
+  padding: 40px;
+  border-radius: 50px;
+  border: solid;
+  transition: all 0.3s
+}
+.card_esp:hover {
+  scale: 1.05;
+  transition: all 0.3s;
+}
+.card_esp p {
+  padding: 50px;
+}
+.card_esp a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-weight: bold;
 }
