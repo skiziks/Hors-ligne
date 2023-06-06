@@ -3,15 +3,18 @@
 	font-weight: 700;
 	src:  url(./fonts/Modak-Regular.ttf) format(truetype)
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
   font-family: 'titre';
 }
-p, a, li, span {
+p, a, li, span, h3 {
   font-family: Helvetica, Arial;
 }
 li {
   text-decoration: none;
   list-style-type: none;
+}
+.orange {
+  color: #f5b958;
 }
 * {
   margin: 0;
@@ -20,6 +23,9 @@ li {
 }
 body {
   overflow-x: hidden;
+}
+#section_infographie, #section_video, #section_temoignage, #section_quizz, #en_savoir_plus {
+  padding-top: 120px;
 }
 
 /* CSS du quizz */
@@ -88,10 +94,12 @@ body {
 }
 
 .description_hero_banner {
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 20px;
   text-align: center;
   padding: 0;
-  font-size: 20px;
+  font-size: 1.35em;
 }
 
 
@@ -199,6 +207,14 @@ header {
 #section_video {
   width: 80%;
   margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section_video p {
+  text-align: justify;
+  font-size: larger;
 }
 .video {
   aspect-ratio: 16/9;
@@ -221,6 +237,7 @@ header {
   height: 350px;
   width: 80%;
   display: flex;
+  left: -100%;
   flex-wrap: nowrap; /* Empêche le retour à la ligne des cartes */
   justify-content: flex-start; /* Aligne les cartes au début */
   align-items: stretch; /* Étend les cartes verticalement pour les aligner en hauteur */
@@ -230,6 +247,7 @@ header {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
+
 
 .card_temoignage {
   flex: 0 0 30%; /* Définit une largeur de 80% de l'espace disponible dans le conteneur */
@@ -318,5 +336,101 @@ h2 {
   font-weight: bold;
 }
 
+/* CSS du footer */
 
+footer {
+  background-color: #385281;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 130%;
+}
+#footer_elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px auto;
+}
+.footer_contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.footer_social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 20px auto;
+  gap: 15px;
+  transition: all 0.3s;
+  list-style-type: none;
+}
+.footer_social ul li:hover {
+  scale: 1.05;
+  transition: all 0.3s;
+}
+
+.footer_decouvrir {
+  flex-direction: column;
+  width: 100%;
+}
+.footer_decouvrir h3 {
+  margin-bottom: 20px;
+  width: fit-content;
+  margin: auto;
+}
+.footer_decouvrir ul {
+  height: 80%;
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  align-self: center;
+}
+.footer_decouvrir ul li {
+  width: fit-content;
+  margin: auto;
+}
+.footer_decouvrir ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer_newsletter {
+  width: 100%;
+  align-items: center;
+}
+.footer_newsletter h3 {
+  margin-bottom: 20px;
+  width: fit-content;
+  margin: auto;
+}
+.input_mail {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px auto;
+  padding-left: 10px;
+}
+.submit_mail {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: solid;
+  margin: 10px auto;
+  background-color: #385281;
+  color: white;
+  font-weight: bold;
+}
 
