@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJSP3B9BE7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PJSP3B9BE7');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hors-Ligne</title>
+    <link rel="icon" href="./img/gouvernement.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./LSV.css">
 </head>
@@ -12,11 +22,14 @@
     <header>
         <section class="hero_banner">
             <img src="./img/logoHL.svg" alt="Logo de la campagne">
-            <h1 class="h1_slogan_hero_banner">Retour vers l'avenir social : Les années 70 nous inspirent à trouver l'équilibre numérique !</h1>
-            <p class="description_hero_banner">Facebook, Tik-Tok, Instagram, Twitter tout le monde reconnaît et utilise pour la plupart ces plateformes à notre époque. 
+            <div class="hero_banner_texteSection">
+                <h2 class="h1_slogan_hero_banner">Retour vers l'avenir social : Les années 70 nous inspirent à trouver l'équilibre numérique !</h2>
+                <p class="description_hero_banner">Facebook, Tik-Tok, Instagram, Twitter tout le monde reconnaît et utilise pour la plupart ces plateformes à notre époque. 
                 <br> Après l’apparition de Sixdegrees et MSN, les premiers réseaux sociaux à la fin des années 90, le XXIème siècle connaît aujourd’hui le développement de ce puissant média à tel point que chaque génération voit l’apparition d’un nouveau réseau social. 
                 <br><br> Mais que représentent concrètement les réseaux sociaux en 2023, faisons un bilan voulez vous ?</p>
-            <a href="#nav_bar"><img class="fleche_bottom" src="./img/flechebas.png" alt="fleche_CTA"></a>
+                <a href="#nav_bar"><img class="fleche_bottom" src="./img/flechebas_blanc.png" alt="fleche_CTA"></a>
+            </div>
+            
         </section>
     </header>
     <nav id="nav_bar">
@@ -34,7 +47,7 @@
         <div class="dropdown">
             <img src="./img/accessibilite.png" alt="icone accessibilité" width="50px" height="50px">
             <div class="dropdown-content"> 
-                <li class="range">Taille du texte : <br> <input type="range"></li> 
+                <li id="text-size-li" class="range">Taille du texte : <br> <input type="range"></li>
                 <hr>
                 <li><a href="#" id="contrast">Contraste <button>Changer</button></a></li>
             </div>
@@ -44,8 +57,8 @@
     <!-- Infographie -->
     <section id="section_infographie">
         <h2>Infographie</h2>
-        <figure>
-            <img class="infographie" src="./img/info.png" alt="infographie">
+        <figure class="figure_infographie">
+            <a href="./img/infographie.svg" target="_blank"><img class="infographie" src="./img/infographie.svg" alt="infographie"></a>
         </figure>
     </section>
  
@@ -196,11 +209,11 @@
                     <li><a href="#section_quizz">Quizz</a></li>
                     <li><a href="#en_savoir_plus">En savoir plus</a></li>
                 </ul>
-            </div>
-            <div class="footer_newsletter">
-                <h3 class="orange">Newsletter</h3>
-                <form action="newletter.php" method="post">
-                    <input class="input_mail" type="email" name="email" id="email" placeholder="Votre email"> <br>
+                </div>
+                <div class="footer_newsletter">
+                    <h3 class="orange">Newsletter</h3>
+                    <form action="newletter.php" method="post">
+                        <input class="input_mail" type="email" name="email" id="email" placeholder="Votre email"> <br>
                     <input class="submit_mail" type="submit" value="S'inscrire">
                 </form>
             </div>
