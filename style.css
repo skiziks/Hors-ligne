@@ -9,10 +9,17 @@ h1, h2, h3, h4, h5, h6 {
 p, a, li, span {
   font-family: Helvetica, Arial;
 }
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
 }
 
 /* CSS du quizz */
@@ -41,58 +48,6 @@ p, a, li, span {
 .incorrect {
   background-color: red;
 }
-  
-
-
-
-/* hero banner */
-
-.hero_banner {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 50px;
-}
-
-.fleche_bottom {
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  animation: fleche_bottom 1s infinite alternate;
-}
-@keyframes fleche_bottom {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px);
-  }
-}
-  
-#options button {
-  margin: 10px;
-  padding: 10px 20px;
-}
-
-#explanation {
-  display: none;
-  margin: 20px 0;
-  font-style: italic;
-}
-
-.correct {
-  background-color: green;
-}
-
-.incorrect {
-  background-color: red;
-}
-  
 
 
 
@@ -142,12 +97,18 @@ p, a, li, span {
 
 /* CSS de la barre de navigation */
 
-nav {
-  margin-top: 20px;
-  padding: 0 20px;
+/* CSS de la barre de navigation */
+header {
+  width: 100%;
+  height: fit-content;
+}
+
+#nav_bar {
   position: sticky;
   top: 0;
+  z-index: 1000;
   height: fit-content;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,6 +116,7 @@ nav {
 }
 
 .ul_navbar {
+  top: 0;
   display: flex;
   justify-content: space-around;
   gap: 40px;
@@ -163,12 +125,195 @@ nav {
   padding: 0;
   align-items: center;
 }
+
+
 .liens_navbar {
   color: black;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
 }
+
 .logo_mesr {
+  position: sticky;
+  top: 0;
   aspect-ratio: 3/2;
+}
+
+.hero_banner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 15px;
+  border-radius: 20px;
+  right: 50px;
+  top: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.range {
+  color: #202124;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* CSS de l'infographie */
+
+#section_infographie {
+  margin-top: 50px;
+}
+
+.infographie {
+  aspect-ratio: 16/9;
+  height: 85vh;
+  margin: auto;
+  display: flex;
+  justify-self: center;
+}
+
+/* css de la section vidéo */
+
+#section_video {
+  width: 80%;
+  margin: 50px auto;
+}
+.video {
+  aspect-ratio: 16/9;
+  height: 80vh;
+  margin: 30px auto;
+}
+
+/* CSS de la section témoignage */
+
+#section_temoignage {
+  width: 90%;
+  margin: 50px auto;
+}
+
+#section_temoignage p {
+  font-size: larger;
+}
+
+.cards_temoignage {
+  height: 350px;
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap; /* Empêche le retour à la ligne des cartes */
+  justify-content: flex-start; /* Aligne les cartes au début */
+  align-items: stretch; /* Étend les cartes verticalement pour les aligner en hauteur */
+  gap: 50px; /* Ajoute un espacement entre les cartes */
+  margin: 30px auto;
+  padding-top: 30px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card_temoignage {
+  flex: 0 0 30%; /* Définit une largeur de 80% de l'espace disponible dans le conteneur */
+  height: 80%; /* Remplit la hauteur disponible */
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+
+/* Ajoutez les styles pour le défilement fluide */
+.card_temoignage:first-child {
+  margin-left: 10px; /* Ajoutez une marge à gauche pour la première card */
+}
+
+.card_temoignage:last-child {
+  margin-right: 10px; /* Ajoutez une marge à droite pour la dernière card */
+}
+
+.cards_temoignage::-webkit-scrollbar {
+  width: 0; /* Masquez la scrollbar */
+}
+
+
+/* css du quizz */
+
+#section_quizz {
+  width: 80%;
+  margin: 50px auto;
+  justify-content: center;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: xx-large;
+}
+#quiz-container {
+  border: solid;
+  background-color: antiquewhite;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#question {
+  font-size: x-large;
+}
+
+/* section en savoir plus */
+
+#en_savoir_plus {
+  width: 80%;
+  margin: 50px auto;
+}
+.cards_esp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.card_esp {
+  width: fit-content;
+  padding: 40px;
+  border-radius: 50px;
+  border: solid;
+  transition: all 0.3s
+}
+.card_esp:hover {
+  scale: 1.05;
+  transition: all 0.3s;
+}
+.card_esp p {
+  padding: 50px;
+}
+.card_esp a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-weight: bold;
 }
