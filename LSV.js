@@ -9,7 +9,7 @@ window.onload = function() {
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.maxHeight = panel.scrollHeight + 50 + "px";
         }
       });
     }
@@ -23,7 +23,7 @@ window.onload = function() {
         if (panel2.style.maxHeight) {
           panel2.style.maxHeight = null;
         } else {
-          panel2.style.maxHeight = panel2.scrollHeight + "px";
+          panel2.style.maxHeight = panel2.scrollHeight + 50 + "px";
         }
       });
     }
@@ -37,7 +37,7 @@ window.onload = function() {
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.style.maxHeight = panel.scrollHeight + 50 + "px";
         }
       });
     }
