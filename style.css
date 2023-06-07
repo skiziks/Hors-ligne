@@ -3,6 +3,44 @@
 	font-weight: 700;
 	src:  url(./fonts/Modak-Regular.ttf) format(truetype)
 }
+/* Loader */
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F4EFDD;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px solid #cccccc;
+  border-color: #cccccc transparent #cccccc transparent;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+/* Fin loader */
 h1, h2, h4, h6 {
   font-family: 'titre';
 }

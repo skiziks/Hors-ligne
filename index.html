@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="./LSV.css">
 </head>
 <body>
+
+    <div id="loader">
+        <p><strong>Mise Hors-Ligne</strong></p>
+    </div>
+
     <header>
         <section class="hero_banner">
             <img src="./img/logoHL.svg" alt="Logo de la campagne">
@@ -47,7 +52,7 @@
         <div class="dropdown">
             <img src="./img/accessibilite.png" alt="icone accessibilité" width="50px" height="50px">
             <div class="dropdown-content"> 
-                <li id="text-size-li" class="range">Taille du texte : <br> <input type="range" min="12" max="30"></li>
+                <li id="text-size-li" class="range">Taille du texte : <br> <input type="range" min="12" max="28"></li>
                 <!-- <hr>
                 <li>Contraste <button onclick="toggleContrast()">Changer</button></li> -->
             </div>
@@ -229,6 +234,7 @@
     </script>
     <script src="./access.js"></script>
     <script src="./quizz.js"></script>
+    <script src="./loader.js"></script>
     <script src="./LSV.js"></script>
 </body>
 </html>
