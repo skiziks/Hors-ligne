@@ -167,7 +167,8 @@
     background-color: #c24a3f;
     padding:10px;
     letter-spacing: 2px;
-    font-family: 'titre';
+    font-family: Helvetica, Arial;
+    font-size: large;
  }
 
  .LSV2:hover {
@@ -284,7 +285,8 @@
     background-color: #c24a3f;
     padding:10px;
     letter-spacing: 2px;
-    font-family: 'titre';
+    font-family: Helvetica, Arial;
+    font-size: large;
  }
 
  .LSV3:hover {

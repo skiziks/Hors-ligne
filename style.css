@@ -577,11 +577,20 @@ footer {
 #myChart {
   color: white !important;
   margin-bottom: 20px !important;
+  background-color: #5a3d3e !important;
+  border-radius: 20px !important;
 }
 canvas {
   color: white !important;
 }
 .chart-container {
   width: 90%;
+  margin: auto;
+}
+
+/* css LSV */
+
+.credits_donnees {
+  font-size: 15px;
   margin: auto;
 }
