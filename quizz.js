@@ -115,6 +115,8 @@ function finishQuiz() {
             explanationElement.textContent += "\n" + quizDataFinish[0].noob;
             break;
     }
+
+    
     
     // if (score == quizData.length) {
     //     explanationElement.textContent += "\n" + quizDataFinish[0].expert;

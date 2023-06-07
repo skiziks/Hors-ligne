@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJSP3B9BE7"></script>
     <script>
@@ -62,27 +63,80 @@
 
     <!-- Infographie -->
     <section id="section_infographie">
-        <h2><span class="change_text_size">Infographie</span></h2>
+        <h2>Infographie</h2>
         <figure class="figure_infographie">
             <a href="./img/Infographie.svg" target="_blank"><img class="infographie" src="./img/Infographie.svg" alt="infographie"></a>
         </figure>
     </section>
- 
+
     <!--Le saviez-vous 1-->
     <div class="block1">
-        <button class="LSV1"><h3 class="txt1">Le saviez-vous ? Fait 2 </h3></button>
+        <button class="LSV1"><h3 class="txt1">Le saviez-vous ? 12% des jeunes de 16 à 15 ans passent plus de 5 heures par jour sur les réseaux sociaux ! </h3></button>
             <div class="contenu1">
             <p>
-                On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).
-            </p>
-            </div>
+                En effet parmis les jeunes, il y a 48% qui passent moins de 2 heures, 40% qui passent entre 3 heures et 5 heures et enfin 12% qui passent plus de 5 heures par jour sur les réseaux sociaux ! <br>
+                Voici un graphique représentant ces statistiques : </p>
+                <br> 
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <script>
+                    const ctx = document.getElementById('myChart');
+                    new Chart(ctx, {
+                        
+                        type: 'bar',
+                        data: {
+                        labels: ['- de 2h par jour', 'Entre 3h et 5h par jour', '+ de 5h par jour'],
+                        datasets: [{
+                            data: [48, 40, 12],
+                                    backgroundColor: [
+                                    'rgba(255, 99, 132, 0.6)',
+                                    'rgba(54, 162, 235, 0.6)',
+                                    'rgba(255, 206, 86, 0.6)',
+                                ],
+                            }],
+                            borderWidth: 1
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            x: {
+                                ticks: {
+                                    color: "white"
+                                }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    color: "white",
+                                    callback: function(value) {
+                                        return value + "%";
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: "white"
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
+    </div>
 
     <!-- Vidéo -->
     <section id="section_video">
         <h2>Vidéo</h2>
-        <p>Synopsis : Cette publicité raconte l’histoire d’un jeune adulte de 19 ans Antoine, qui habite dans un appartement, il sort avec ses potes et passe en parallèle tu temps sur son téléphone et plus particulièrement sur les réseaux sociaux. Au fur et à mesure que le temps passe Antoine passe de plus en plus de temps sur les réseaux et consacre moins de temps à ses études et amis et donnant des excuses bidons et finit par s’isoler. Et puis un jour Antoine se met à regarder dehors et sort pour se prendre en mais et retrouver une vie sociable.</p>
-        <video class="video" src="#" style="border: solid red;"></video>
+        <p>Synopsis : Cette publicité raconte l’histoire d’un jeune adulte de 19 ans, Antoine, qui habite dans un appartement, il sort avec ses potes et passe en parallèle tu temps sur son téléphone et plus particulièrement sur les réseaux sociaux. Au fur et à mesure que le temps passe Antoine y passe de plus en plus de temps et consacre moins de temps à ses études et amis en donnant des excuses bidons et finit par s’isoler. Et puis un jour Antoine se met à regarder dehors et sort pour se prendre en mains et retrouver une vie sociale.</p>
+        <div class="video-container">
+            <video class="video" src="./video/Lerond_pecha-kucha.mp4" controls></video>
+            <img class="video-overlay" src="./img/border_retro.svg" alt="Image Overlay">
+        </div>
     </section>
     
     <!-- Le saviez-vous 2 -->
@@ -166,7 +220,7 @@
         <h2>En savoir plus</h2>
         <div class="cards_esp">
             <div class="card_esp">
-                <a href="youtube.com">Article Cairn</a>
+                <a href="https://www.blogdumoderateur.com/etude-usage-reseaux-sociaux-generation-z-2022/">Article BDM</a>
             </div>
             <div class="card_esp">
                 <a href="youtube.com">Article Cairn</a>
