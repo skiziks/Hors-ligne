@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJSP3B9BE7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PJSP3B9BE7');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hors-Ligne</title>
+    <link rel="icon" href="./img/gouvernement.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./LSV.css">
 </head>
 <body>
+
+    <div id="loader">
+        <p><strong>Mise Hors-Ligne</strong></p>
+    </div>
+
     <header>
         <section class="hero_banner">
             <img src="./img/logoHL.svg" alt="Logo de la campagne">
-            <h1 class="h1_slogan_hero_banner">Retour vers l'avenir social : Les années 70 nous inspirent à trouver l'équilibre numérique !</h1>
-            <p class="description_hero_banner">Facebook, Tik-Tok, Instagram, Twitter tout le monde reconnaît et utilise pour la plupart ces plateformes à notre époque. 
-                <br> Après l’apparition de Sixdegrees et MSN, les premiers réseaux sociaux à la fin des années 90, le XXIème siècle connaît aujourd’hui le développement de ce puissant média à tel point que chaque génération voit l’apparition d’un nouveau réseau social. 
-                <br><br> Mais que représentent concrètement les réseaux sociaux en 2023, faisons un bilan voulez vous ?</p>
-            <a href="#nav_bar"><img class="fleche_bottom" src="./img/flechebas.png" alt="fleche_CTA"></a>
+            <div class="hero_banner_texteSection">
+                <h2 class="h1_slogan_hero_banner">Retour vers l'avenir social : Les années 70 nous inspirent à trouver l'équilibre numérique !</span></h2>
+                <p class="description_hero_banner">Facebook, Tik-Tok, Instagram, Twitter tout le monde reconnaît et utilise pour la plupart ces plateformes à notre époque. 
+                Après l’apparition de Sixdegrees et MSN, les premiers réseaux sociaux à la fin des années 90, le XXIème siècle connaît aujourd’hui le développement de ce puissant média à tel point que chaque génération voit l’apparition d’un nouveau réseau social. 
+                <br><br> Mais que représentent concrètement les réseaux sociaux en 2023, faisons un bilan voulez vous ?</span></p>
+                <a href="#nav_bar"><img class="fleche_bottom" src="./img/flechebas_blanc.png" alt="fleche_CTA"></a>
+            </div>
+            
         </section>
     </header>
     <nav id="nav_bar">
@@ -34,18 +52,19 @@
         <div class="dropdown">
             <img src="./img/accessibilite.png" alt="icone accessibilité" width="50px" height="50px">
             <div class="dropdown-content"> 
-                <li class="range">Taille du texte : <br> <input type="range"></li> 
-                <hr>
-                <li><a href="#" id="contrast">Contraste <button>Changer</button></a></li>
+                <li id="text-size-li" class="range">Taille du texte : <br> <input type="range" min="12" max="28"></li>
+                <!-- <hr>
+                <li>Contraste <button onclick="toggleContrast()">Changer</button></li> -->
             </div>
         </div>
+        
     </nav>
 
     <!-- Infographie -->
     <section id="section_infographie">
-        <h2>Infographie</h2>
-        <figure>
-            <img class="infographie" src="./img/info.png" alt="infographie">
+        <h2><span class="change_text_size">Infographie</span></h2>
+        <figure class="figure_infographie">
+            <a href="./img/Infographie.svg" target="_blank"><img class="infographie" src="./img/Infographie.svg" alt="infographie"></a>
         </figure>
     </section>
  
@@ -62,7 +81,7 @@
     <!-- Vidéo -->
     <section id="section_video">
         <h2>Vidéo</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo sapiente rem ducimus enim sunt pariatur perspiciatis recusandae aut mollitia autem consequatur, commodi dicta assumenda tempore quam incidunt fugiat! Exercitationem, quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere labore dignissimos odit architecto voluptatibus alias animi vel voluptatem? Explicabo labore magni assumenda quibusdam omnis doloremque porro ut voluptatibus amet vel? Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus error dignissimos officia nesciunt sit possimus, veniam rem architecto deleniti incidunt, ex optio accusantium ab debitis ipsum ut cumque saepe beatae!</p>
+        <p>Synopsis : Cette publicité raconte l’histoire d’un jeune adulte de 19 ans Antoine, qui habite dans un appartement, il sort avec ses potes et passe en parallèle tu temps sur son téléphone et plus particulièrement sur les réseaux sociaux. Au fur et à mesure que le temps passe Antoine passe de plus en plus de temps sur les réseaux et consacre moins de temps à ses études et amis et donnant des excuses bidons et finit par s’isoler. Et puis un jour Antoine se met à regarder dehors et sort pour se prendre en mais et retrouver une vie sociable.</p>
         <video class="video" src="#" style="border: solid red;"></video>
     </section>
     
@@ -79,36 +98,50 @@
     <!-- Témoignages -->
     <section id="section_temoignage">
         <h2>Témoignages</h2>
-        <div class="cards_temoignage">
+        <div class="cards_temoignage">           
             <div class="card_temoignage">
-                <img src="./img/utilisateur.png" alt="photo de profil" width="25%">
-                <h3>Bertrand</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="cards_conteneur">
+                <img class="avatar" src="./img/utilisateur.png" alt="photo de profil" >
+                <h3 class="prenoms">Jorice</h3>
+                <p class="txt_temoignage">"Avant, j'étais accro aux réseaux sociaux. Je passais des heures chaque jour à scroller, scroller, scroller encore et encore sans même m'en rendre compte mais j'ai pris conscience de l'impact négatif que ça pouvait avoir sur ma productivité et ma santé mentale. J'ai donc décidé de limiter mon temps sur les réseaux sociaux à 30 minutes par jour et depuis je me sens beaucoup mieux et plus concentré sur mes objectifs."</p>
+            </div>
             </div>
             <div class="card_temoignage">
-                <img src="./img/utilisateur.png" alt="photo de profil" width="25%">
-                <h3>Bertrand</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="cards_conteneur">
+                <img class="avatar" src="./img/utilisateur.png" alt="photo de profil">
+                <h3 class="prenoms">Laura</h3>
+                <p class="txt_temoignage">"Les réseaux sociaux étaient devenus une véritable source de distraction pour moi. Je me retrouvais souvent à procrastiner et à perdre un temps précieux. J'ai donc instauré une règle stricte : pas de téléphone pendant mes heures de travail. Maintenant, à chaque fois que je dois travailler, j'éteins mon téléphone pour éviter d'être distraite toutes les 5 minutes et ça m'aide vraiment à rester focus."
+                </p>
+            </div>
             </div>
             <div class="card_temoignage">
-                <img src="./img/utilisateur.png" alt="photo de profil" width="25%">
-                <h3>Bertrand</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="cards_conteneur">
+                <img class="avatar" src="./img/utilisateur.png" alt="photo de profil">
+                <h3 class="prenoms">Damien</h3>
+                <p class="txt_temoignage">"J'avais l'habitude de comparer ma vie avec celles des autres sur Instagram et je me suis rendu compte que ça me faisait perdre confiance en moi car j'avais tendance à penser que ma vie était moins intéressante que celle des autres. J'ai réalisé que je devais prendre du recul et me concentrer sur ma propre réalité. J'ai commencé par désactiver les notifications des réseaux sociaux et j'ai décidé de privilégier les relations IRL et mes pratiques sportives car je ne veux plus avoir l'impression de gaspiller mon temps."
+                </p>
+            </div>
             </div>
             <div class="card_temoignage">
-                <img src="./img/utilisateur.png" alt="photo de profil" width="25%">
-                <h3>Bertrand</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="cards_conteneur">
+                <img class="avatar" src="./img/utilisateur.png" alt="photo de profil">
+                <h3 class="prenoms">Karim</h3>
+                <p class="txt_temoignage">"Les réseaux sociaux avaient pris le contrôle de mes pensées. J'étais constamment bombardé d'informations et j'avais du mal à me déconnecter. J'ai donc décidé de faire une pause totale sur les réseaux sociaux pendant une semaine. J'ai réaliser que les réseaux sociaux dévoraient mon temps car sans eux, le temps passe plus lentement. Il m'était déjà arrivé de passer plus de 3h d'affilé sur les réseaux et d'avoir l'impression de n'avoir passé que 30 min dessus. Grâce à l'application Onesec, je fais beaucoup plus attention à mon temps et j'essaye de ne pas en passer trop sur les écrans."</p>
+            </div>
             </div>
             <div class="card_temoignage">
-                <img src="./img/utilisateur.png" alt="photo de profil" width="25%">
-                <h3>Bertrand</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="cards_conteneur">
+                <img class="avatar" src="./img/utilisateur.png" alt="photo de profil">
+                <h3 class="prenoms">Agathe</h3>
+                <p class="txt_temoignage">"J'avais un énorme problème avec TikTok, je voulais absolument produire du contenu car les statistiques (likes et vues) m'obnubilaient et me procuraient une sensation de plaisir au début. Le soucis, c'est qu'à force de publier mes vidéos, les statistiques ne suivaient pas toujours et ça me rendait vraiment anxieuse. Après plusieurs discussions avec ma psy, nous avons conclu que les statistiques étaient une information futile et qu'en aucun cas cela ne devait impacter mon estime de moi."</p>
+            </div>
             </div>
             <div class="card_temoignage">
-                <img src="./img/utilisateur.png" alt="photo de profil" width="25%">
-                <h3>Bertrand</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="cards_conteneur">
+                <img class="avatar" src="./img/utilisateur.png" alt="photo de profil">
+                <h3 class="prenoms">Fabrice</h3>
+                <p class="txt_temoignage">"Je recommande sincèrement à tous ceux qui se sentent dépassés par les réseaux sociaux de prendre du recul et de réévaluer leur relation avec ces applications. La vie est tellement plus belle lorsque l'on est pleinement présent et que l'on se concentre sur ce qui compte vraiment. J'étais moi même addicte aux RS et je peux vous assurer que ce n'est pas facile de sortir de l'addiction, mais je suis convaicu que ça dépend de la volonté de chacun, si vous voulez vraiment vous pouvez. Alors, prenez le temps de vous déconnecter, de vous recentrer et de vous ouvrir à un monde de possibilités au-delà de l'écran."</p>
+            </div>
             </div>
         </div>
 
@@ -196,11 +229,11 @@
                     <li><a href="#section_quizz">Quizz</a></li>
                     <li><a href="#en_savoir_plus">En savoir plus</a></li>
                 </ul>
-            </div>
-            <div class="footer_newsletter">
-                <h3 class="orange">Newsletter</h3>
-                <form action="newletter.php" method="post">
-                    <input class="input_mail" type="email" name="email" id="email" placeholder="Votre email"> <br>
+                </div>
+                <div class="footer_newsletter">
+                    <h3 class="orange">Newsletter</h3>
+                    <form action="newletter.php" method="post">
+                        <input class="input_mail" type="email" name="email" id="email" placeholder="Votre email"> <br>
                     <input class="submit_mail" type="submit" value="S'inscrire">
                 </form>
             </div>
@@ -215,6 +248,7 @@
     </script>
     <script src="./access.js"></script>
     <script src="./quizz.js"></script>
+    <script src="./loader.js"></script>
     <script src="./LSV.js"></script>
 </body>
 </html>
