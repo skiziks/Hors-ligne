@@ -295,35 +295,6 @@ header::before {
 
 /* css de la section vidéo */
 
-/* #section_video {
-  width: 80%;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#section_video p {
-  text-align: justify;
-  font-size: larger;
-}
-.video {
-  aspect-ratio: 16/9;
-  height: 80vh;
-  margin: 30px auto;
-}
-.video::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  background-image: url(./img/border_retro.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: -10;
-} */
 
 #section_video {
   width: 80%;
@@ -345,7 +316,7 @@ header::before {
 
 .video {
   aspect-ratio: 16/9;
-  height: 70vh;
+  width: 60vw;
   margin: 150px auto;
   border-radius: 30px;
 }
@@ -498,10 +469,13 @@ h2 {
 }
 .card_esp {
   width: fit-content;
-  padding: 40px;
   border-radius: 50px;
   border: solid;
-  transition: all 0.3s
+  transition: all 0.3s;
+  padding: 40px 0;
+}
+.card_esp a {
+  padding: 40px;
 }
 .card_esp:hover {
   scale: 1.05;
@@ -519,6 +493,14 @@ h2 {
 
 /* CSS du footer */
 
+#barre_retro {
+  width: 120vw;
+  margin: auto;
+  position: relative;
+  transform: translate(-5%);
+  margin-top: 0;
+}
+
 footer {
   background-color: #385281;
   color: white;
@@ -526,7 +508,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   font-size: 130%;
 }
 #footer_elements {
@@ -637,3 +619,38 @@ canvas {
   font-size: 15px;
   margin: auto;
 }
+
+/* css back to top */
+
+/* Styles pour le bouton */
+    .btn_btt {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 9999;
+        scale: 1.5;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    .btn_btt:hover {
+        opacity: 1;
+    }
+
+    /* Styles pour l'icône de la flèche */
+    #btt {
+        color: #fff;
+        font-size: 20px;
+    }
+
