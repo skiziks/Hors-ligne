@@ -1,8 +1,11 @@
+// -------------------------
+// Changer la taille du texte
+// -------------------------
+
 // Récupérer les éléments liens
 const textSizeLink = document.getElementById('text-size');
 const contrastLink = document.getElementById('contrast');
 const textSizeLi = document.getElementById('text-size-li');
-
 
 const range = textSizeLi.querySelector('input[type="range"]');
 
@@ -10,29 +13,45 @@ range.addEventListener('input', function() {
     adjustTextSize(range.value);
 });
 
-
 function adjustTextSize(textSize) {
-    console.log(textSize);
-    // document.body.style.fontSize = textSize + 'px';
+    const minSize = 12; // Taille de police minimale autorisée
+    const maxSize = 30; // Nouvelle taille de police maximale autorisée (20px)
+
+    // Vérifier si la taille du texte est inférieure à la taille minimale
+    if (textSize < minSize) {
+        textSize = minSize; // Utiliser la taille minimale
+    }
+
+    // Vérifier si la taille du texte dépasse la taille maximale
+    if (textSize > maxSize) {
+        textSize = maxSize; // Utiliser la taille maximale
+    }
+
+    // Modifier uniquement les balises <p> avec la taille de police ajustée
+    const paragraphs = document.getElementsByTagName('p');
+    for (let i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.fontSize = textSize + 'px';
+    }
 }
 
-// // Ajouter les écouteurs d'événements aux liens
-// textSizeLink.addEventListener('click', adjustTextSize);
-// contrastLink.addEventListener('click', changeContrast);
+// -------------------------
+// Changer le contrast
+// -------------------------
 
-// // Fonction pour ajuster la taille du texte
-// function adjustTextSize(event) {
-//     event.preventDefault();
-    
-//     // Demander à l'utilisateur la taille du texte souhaitée (vous pouvez utiliser une boîte de dialogue ou une autre méthode d'interaction)
-//     const textSize = prompt("Entrez la taille du texte souhaitée (en pixels) :");
 
-//     // Modifier la taille de police du contenu en utilisant la valeur saisie par l'utilisateur
-//     document.body.style.fontSize = textSize + "px";
+// contrastLink.addEventListener('click', function() {
+//     toggleContrast();
+// });
+
+
+// let isContrastOn = false;
+
+// function toggleContrast() {
+//     const elements = document.getElementsByClassName('high-contrast');
+//     const contrastElements = document.getElementsByClassName('contrast');
+//     for (let i = 0; i < elements.length; i++) {
+//         contrastElements[i].classList.toggle('high-contrast');
+//     }
 // }
 
-// // Fonction pour changer le contraste
-// function changeContrast(event) {
-//     event.preventDefault();
-//     // Ajouter ici le code pour modifier les styles de contraste selon les préférences de l'utilisateur
-// }
+
