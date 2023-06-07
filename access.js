@@ -15,7 +15,7 @@ range.addEventListener('input', function() {
 
 function adjustTextSize(textSize) {
     const minSize = 12; // Taille de police minimale autorisée
-    const maxSize = 30; // Nouvelle taille de police maximale autorisée (20px)
+    const maxSize = 28; // Nouvelle taille de police maximale autorisée (20px)
 
     // Vérifier si la taille du texte est inférieure à la taille minimale
     if (textSize < minSize) {
