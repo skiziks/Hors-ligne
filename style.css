@@ -234,7 +234,7 @@ header {
 }
 
 .cards_temoignage {
-  height: 350px;
+  height: 700px;
   width: 80%;
   display: flex;
   left: -100%;
@@ -248,17 +248,60 @@ header {
   scroll-snap-type: x mandatory;
 }
 
+.cards_conteneur {
+  background-color: #e67b3c;
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  height: 90%;
+}
 
 .card_temoignage {
   flex: 0 0 30%; /* Définit une largeur de 80% de l'espace disponible dans le conteneur */
-  height: 80%; /* Remplit la hauteur disponible */
+  height:80%; /* Remplit la hauteur disponible */
   border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 25px;
+  background-color: #f5b958;
+}
+
+.avatar{
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  width: 25%;
+  display: flex;
+}
+
+.prenoms{
+  font-family: Helvetica, Arial;
+  background-color: #c24a3f;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #F1F1F1;
+}
+
+.txt_temoignage {
+  font-family: Helvetica, Arial;
+  background-color: #5a3539;
+  border: none;
+  border-radius: 30px;
   padding: 20px;
+  color: #F1F1F1;
+  overflow: auto;
+  max-height: 60%; /* ajustez cette valeur en fonction de vos besoins */
+}
+
+.txt_temoignage::-webkit-scrollbar {
+  display: none;
 }
 
 
