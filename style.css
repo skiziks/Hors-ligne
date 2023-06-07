@@ -28,6 +28,7 @@ li {
 }
 body {
   overflow-x: hidden;
+  background-color: #F4EFDD;
 }
 #section_infographie, #section_video, #section_temoignage, #section_quizz, #en_savoir_plus {
   padding-top: 120px;
@@ -102,7 +103,7 @@ body {
 }
 
 .description_hero_banner {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 20px;
   text-align: center;
@@ -190,11 +191,10 @@ header::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid;
 }
 .hero_banner_texteSection {
   background-color: #703b1d90;
-  width: fit-content;
+  height: fit-content;
   padding: 10px;
 }
 
@@ -231,6 +231,13 @@ header::before {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+
 /* CSS de l'infographie */
 
 
