@@ -653,9 +653,8 @@ canvas {
         opacity: 1;
     }
 
-    /* Styles pour l'icône de la flèche */
-    #btt {
-        color: #fff;
-        font-size: 20px;
-    }
-
+/* Styles pour l'icône de la flèche */
+#btt {
+    color: #fff;
+    font-size: 20px;
+}
