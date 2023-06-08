@@ -48,7 +48,8 @@
     background-color: #c24a3f;
     padding:10px;
     letter-spacing: 2px;
-    font-family: 'titre';
+    font-family: Helvetica, Arial;
+    font-size: large;
  }
 
  .LSV1:hover {
@@ -95,6 +96,7 @@
 .contenu1 {
     font-size: 14pt;
     width: 93%;
+    height: fit-content;
     background-color: #c24a3f;
     display: flex;
     flex-wrap: wrap;
@@ -165,7 +167,8 @@
     background-color: #c24a3f;
     padding:10px;
     letter-spacing: 2px;
-    font-family: 'titre';
+    font-family: Helvetica, Arial;
+    font-size: large;
  }
 
  .LSV2:hover {
@@ -282,7 +285,8 @@
     background-color: #c24a3f;
     padding:10px;
     letter-spacing: 2px;
-    font-family: 'titre';
+    font-family: Helvetica, Arial;
+    font-size: large;
  }
 
  .LSV3:hover {
