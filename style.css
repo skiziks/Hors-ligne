@@ -71,7 +71,9 @@ body {
 #section_infographie, #section_video, #section_temoignage, #section_quizz, #en_savoir_plus {
   padding-top: 120px;
 }
-
+#section_infographie h2, #section_video h2, #section_temoignage h2, #section_quizz h2, #en_savoir_plus h2 {
+  font-size: 3.5em;
+}
 /* hero banner */
 
 .hero_banner {
