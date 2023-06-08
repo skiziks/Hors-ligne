@@ -1,35 +1,35 @@
 const quizData = [
     {
-        question: "La surconsommation des réseaux sociaux peut entraîner une diminution de la communication face à face.",
+        question: "Environ la moitié des jeunes de 16 à 25 ans passent plus de 2h par jour sur les réseaux sociaux.",
         correctAnswer: true,
-        explanation: "Lorsque les individus passent trop de temps sur les réseaux sociaux, ils ont tendance à négliger les interactions en personne, ce qui peut conduire à une diminution de la communication face à face. Cela peut avoir un impact négatif sur les relations interpersonnelles et l'établissement de liens significatifs."
+        explanation: "Selon une étude du 30 novembre 2021 sur 3838 jeunes, 52% d'entre eux passeraient plus de 2h sur les réseaux par jour. Si toi aussi tu passes plus de 2h par jour sur les réseaux, nous t'invitons à télécharger l'application 'Onesec' qui va t'aider à contrôler ton temps d'écran."
     },
     {
-        question: "La surconsommation des réseaux sociaux peut entraîner une dépendance sociale.",
+        question: "En moyenne, une personne passe 1/4 de son temps de vie en ligne.",
         correctAnswer: false,
-        explanation: "L'utilisation excessive des réseaux sociaux peut créer une dépendance sociale, où les individus ont constamment besoin de validation et d'attention en ligne. Cette dépendance peut nuire aux relations réelles, car les personnes peuvent avoir du mal à se connecter authentiquement avec les autres en dehors du monde virtuel."
+        explanation: "Ce n'est pas 1/4 mais plutôt 1/3 de notre temps de vie qui sera passé sur un écran. Des études montrent que pour une petite partie des jeunes, le temps passé sur un écran est supérieur à leur temps de sommeil."
     },
     {
-        question: "La surconsommation des réseaux sociaux peut entraîner une diminution de la productivité.",
+        question: "Les réseaux sociaux sont une source d'anxiété sociale et de perte de concentration.",
         correctAnswer: true,
-        explanation: "L'utilisation excessive des réseaux sociaux peut entraîner une diminution de la productivité, car les individus peuvent passer plus de temps à naviguer sur les réseaux sociaux qu'à travailler ou à faire des tâches importantes."
+        explanation: "Des études montrent que les réseaux sociaux sont une source d'anxiété sociale à cause du besoin de satisfaire son public que l'on peut ressentir. Pour ce qu'il en est de la perte de concentration, elle existe à cause des notifications qui sont extrêmement distrayantes. Si tu veux être pleinement concentré dans ton travail, nous te recommendons de désactiver les notifications de tes réseaux."
     },
     {
-        question: "La surconsommation des réseaux sociaux peut entraîner une diminution de la qualité du sommeil.",
+        question: "3/4 des français déclarent utiliser les réseaux sociaux.",
         correctAnswer: true,
-        explanation: "L'utilisation excessive des réseaux sociaux peut entraîner une diminution de la qualité du sommeil, car les individus peuvent passer plus de temps à naviguer sur les réseaux sociaux qu'à dormir. De plus, la lumière bleue émise par les écrans peut perturber le rythme circadien, ce qui peut entraîner des problèmes de sommeil."
+        explanation: "En effet c'est 75,9% des français qui utilisent les réseaux sociaux en France. Les réseaux sociaux ne se résument pas seulement à Facebook, Youtube, Instagram, TikTok et Twitter. LinkedIn aussi est un réseau social même si il comporte une dimension professionnelle."
     },
     {
-        question: "La surconsommation des réseaux sociaux peut entraîner une diminution de l'estime de soi.",
+        question: "Le divertissement est la 1ère raison pour laquelle les français utilisent les réseaux sociaux.",
         correctAnswer: true,
-        explanation: "L'utilisation excessive des réseaux sociaux peut entraîner une diminution de l'estime de soi, car les individus peuvent se comparer aux autres en ligne et se sentir mal à l'aise avec leur propre vie. De plus, les individus peuvent se sentir mal à l'aise avec leur propre corps en raison de la pression sociale pour avoir un corps parfait."
+        explanation: "Il y aurait 60% des français qui déclarent utiliser les réseaux sociaux pour se divertir principalement. N'oublie pas que les réseaux sociaux peuvent aussi te servir à t'informer même si tu dois rester vigilent face aux fake news."
     },
 ];
 
 const quizDataFinish = [
     {
-        expert: "Vous avez un très bon niveau de connaissances sur les réseaux sociaux. Continuez à vous informer sur les réseaux sociaux et leurs effets sur la santé mentale et surtout faites en part à votre entourage pour les sensibiliser.",
-        avance: "Vous avez un bon niveau de connaissances sur les réseaux sociaux. Continuez à vous informer sur les réseaux sociaux et leurs effets sur la santé mentale.",
+        expert: "Vous avez un très bon niveau de connaissances sur les réseaux sociaux. Continuez à vous informer sur les réseaux sociaux et leurs effets sur la santé mentale et surtout faites en part à votre entourage pour les sensibiliser sur le sujet.",
+        avance: "Vous avez un bon niveau de connaissances sur les réseaux sociaux. Continuez à vous informer sur les réseaux sociaux et leurs effets sur la santé mentale et n'hésitez pas à en faire part à votre entourage.",
         intermediaire: "Vous avez un niveau de connaissances moyen sur les réseaux sociaux. Continuez à vous informer sur les réseaux sociaux et leurs effets sur la santé mentale.",
         debutant: "Vous avez un faible niveau de connaissances sur les réseaux sociaux. Continuez à vous informer sur les réseaux sociaux et leurs effets sur la santé mentale.",
         noob: "Vous avez un très faible niveau de connaissances sur les réseaux sociaux. Continuez à vous informer sur les réseaux sociaux et leurs effets sur la santé mentale."

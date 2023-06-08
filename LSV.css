@@ -80,6 +80,7 @@
     transition: transform 2s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 2s cubic-bezier(0.2, 0.8, 0.2, 1);
     border: none;
     border-radius: 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     background-color:#f5b958;
 
 }
@@ -200,6 +201,7 @@
     border: none;
     border-radius: 30px;
     background-color:#f5b958;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
 }
 
@@ -318,6 +320,7 @@
     border: none;
     border-radius: 30px;
     background-color:#f5b958;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 
 }
 
