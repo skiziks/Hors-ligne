@@ -41,6 +41,11 @@ const trueBtn = document.getElementById("true-btn");
 const falseBtn = document.getElementById("false-btn");
 const explanationElement = document.getElementById("explanation");
 const nextBtn = document.getElementById("next-btn");
+nextBtn.style.backgroundColor = "#385281";
+nextBtn.style.color = "white";
+nextBtn.style.border = "none";
+nextBtn.style.borderRadius = "20px";
+nextBtn.style.padding = "10px 20px";
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -53,33 +58,37 @@ function loadQuestion() {
     trueBtn.classList.remove("correct", "incorrect");
     falseBtn.classList.remove("correct", "incorrect");
     nextBtn.disabled = true;
+    nextBtn.classList.add("disabled");
 }
 
 function checkAnswer(isTrue) {
-    if (isTrue === true) {
-        var Breponse = trueBtn;
-        var Mreponse = falseBtn;
-    }
-    else {
-        var Breponse = falseBtn;
-        var Mreponse = trueBtn;
-    }
     const currentQuestion = quizData[currentQuestionIndex];
+    const correctAnswer = currentQuestion.correctAnswer;
 
-    if (isTrue === currentQuestion.correctAnswer) {
+    if (isTrue === correctAnswer) {
         score++;
         explanationElement.textContent = "Bonne réponse ! " + currentQuestion.explanation;
-        Breponse.classList.add("correct");
+        if (isTrue) {
+            trueBtn.classList.add("correct");
+        } else {
+            falseBtn.classList.add("correct");
+        }
     } else {
         explanationElement.textContent = "Mauvaise réponse. " + currentQuestion.explanation;
-        Breponse.classList.add("incorrect");
-        Mreponse.classList.add("correct");
+        if (isTrue) {
+            trueBtn.classList.add("incorrect");
+            falseBtn.classList.remove("correct");
+        } else {
+            falseBtn.classList.add("incorrect");
+            trueBtn.classList.remove("correct");
+        }
     }
 
     explanationElement.style.display = "block";
     trueBtn.disabled = true;
     falseBtn.disabled = true;
     nextBtn.disabled = false;
+    nextBtn.classList.remove("disabled"); 
 }
 
 function nextQuestion() {
@@ -89,6 +98,7 @@ function nextQuestion() {
         trueBtn.disabled = false;
         falseBtn.disabled = false;
         nextBtn.disabled = true;
+        nextBtn.classList.add("disabled"); 
     } else {
         finishQuiz();
     }
