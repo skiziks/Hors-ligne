@@ -318,10 +318,10 @@ header::before {
   width: 80%;
   display: flex;
   left: -100%;
-  flex-wrap: nowrap; /* Empêche le retour à la ligne des cartes */
-  justify-content: flex-start; /* Aligne les cartes au début */
-  align-items: stretch; /* Étend les cartes verticalement pour les aligner en hauteur */
-  gap: 50px; /* Ajoute un espacement entre les cartes */
+  flex-wrap: nowrap; 
+  justify-content: flex-start; 
+  align-items: stretch; 
+  gap: 50px; 
   margin: 30px auto;
   padding-top: 30px;
   overflow-x: auto;
@@ -337,8 +337,8 @@ header::before {
 }
 
 .card_temoignage {
-  flex: 0 0 30%; /* Définit une largeur de 80% de l'espace disponible dans le conteneur */
-  height:80%; /* Remplit la hauteur disponible */
+  flex: 0 0 30%; 
+  height:80%; 
   border-radius: 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -377,7 +377,7 @@ header::before {
   padding: 20px;
   color: #F1F1F1;
   overflow: auto;
-  max-height: 60%; /* ajustez cette valeur en fonction de vos besoins */
+  max-height: 60%; 
 }
 
 .txt_temoignage::-webkit-scrollbar {
