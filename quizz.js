@@ -59,7 +59,12 @@ function loadQuestion() {
     falseBtn.classList.remove("correct", "incorrect");
     nextBtn.disabled = true;
     nextBtn.classList.add("disabled");
+
+    // Afficher le numéro de la question
+    const questionNumberElement = document.getElementById("question-number");
+    questionNumberElement.textContent = "Question " + (currentQuestionIndex + 1) + " sur " + quizData.length;
 }
+
 
 function checkAnswer(isTrue) {
     const currentQuestion = quizData[currentQuestionIndex];
