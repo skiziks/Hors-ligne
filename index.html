@@ -103,6 +103,13 @@
                             borderWidth: 1
                     },
                     options: {
+                        tooltips: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                        return tooltipItem.yLabel;
+                                }
+                            }
+                        },
                         responsive: true,
                         scales: {
                             x: {
@@ -123,6 +130,7 @@
                         },
                         plugins: {
                             legend: {
+                                display: false,
                                 labels: {
                                     color: "white"
                                 }
